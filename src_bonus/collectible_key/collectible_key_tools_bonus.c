@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   collectible_key_tools_bonus.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcheragh <mcheragh@student.42.fr>          +#+  +:+       +#+        */
+/*   By: stdi-pum <stdi-pum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 17:55:55 by mcheragh          #+#    #+#             */
-/*   Updated: 2025/04/01 17:55:56 by mcheragh         ###   ########.fr       */
+/*   Updated: 2025/09/08 20:57:52 by stdi-pum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	key_found(t_game *game)
 			SCREEN_HEIGHT - 20, 0x660000, phrase);
 		mlx_string_put(game->mlx, game->win, SCREEN_WIDTH - 150, \
 				SCREEN_HEIGHT - 21, 0x660000, phrase);
+		
 	}
 }
 
@@ -43,6 +44,7 @@ void	check_collect_key(t_game *game)
 		{
 			game->player.key += 1;
 			game->key[i].active = 0;
+			play_audio("/home/stdi-pum/Documents/PROJECTS/Cub3D/assets/audio/collect.wav");
 		}
 	}
 }

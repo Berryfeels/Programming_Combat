@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcheragh <mcheragh@student.42.fr>          +#+  +:+       +#+        */
+/*   By: stdi-pum <stdi-pum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 17:58:19 by mcheragh          #+#    #+#             */
-/*   Updated: 2025/04/02 12:38:54 by mcheragh         ###   ########.fr       */
+/*   Updated: 2025/09/08 15:45:03 by stdi-pum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	open_game(char *selected_map, t_start_page *start_page)
 int	main(int argc, char **argv)
 {
 	t_start_page	*start_page;
-
+	
 	(void)(argv);
 	if (argc > 1)
 	{

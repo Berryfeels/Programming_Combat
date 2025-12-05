@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   collectible_ammo_tools_bonus.c                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcheragh <mcheragh@student.42.fr>          +#+  +:+       +#+        */
+/*   By: stdi-pum <stdi-pum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 17:55:42 by mcheragh          #+#    #+#             */
-/*   Updated: 2025/04/01 17:55:43 by mcheragh         ###   ########.fr       */
+/*   Updated: 2025/09/08 20:33:14 by stdi-pum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ void	check_collect_ammo(t_game *game)
 		if ((int)game->player.x == c_ammo_x && \
 			(int)game->player.y == c_ammo_y && game->player.ammo < 6)
 		{
+			play_audio("/home/stdi-pum/Documents/PROJECTS/Cub3D/assets/audio/collect.wav");
 			game->player.ammo += 3;
 			if (game->player.ammo > 6)
 				game->player.ammo = 6;

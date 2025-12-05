@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   update_door_state_bonus.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcheragh <mcheragh@student.42.fr>          +#+  +:+       +#+        */
+/*   By: stdi-pum <stdi-pum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 17:56:10 by mcheragh          #+#    #+#             */
-/*   Updated: 2025/04/01 17:56:11 by mcheragh         ###   ########.fr       */
+/*   Updated: 2025/09/08 20:13:56 by stdi-pum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ long	get_time_of_the_day(void)
 
 void	change_door_state(t_game *game, int index)
 {
+	play_audio("/home/stdi-pum/Documents/PROJECTS/Cub3D/assets/audio/door.wav");
 	if (game->door[index].door_state == 1)
 	{
 		game->door[index].transition_time = get_time_of_the_day();

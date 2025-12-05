@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   collectibe_heart_tools_bonus.c                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcheragh <mcheragh@student.42.fr>          +#+  +:+       +#+        */
+/*   By: stdi-pum <stdi-pum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 17:55:21 by mcheragh          #+#    #+#             */
-/*   Updated: 2025/04/01 17:55:22 by mcheragh         ###   ########.fr       */
+/*   Updated: 2025/09/08 20:28:28 by stdi-pum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ void	check_collect_hearts(t_game *game)
 			if (game->player.health > 100)
 				game->player.health = 100;
 			game->heart[i].active = 0;
+			play_audio("/home/stdi-pum/Documents/PROJECTS/Cub3D/assets/audio/collect.wav");
 		}
 		i++;
 	}

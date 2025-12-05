@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   door_tools_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcheragh <mcheragh@student.42.fr>          +#+  +:+       +#+        */
+/*   By: stdi-pum <stdi-pum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 17:56:02 by mcheragh          #+#    #+#             */
-/*   Updated: 2025/04/01 17:56:03 by mcheragh         ###   ########.fr       */
+/*   Updated: 2025/09/09 18:49:02 by stdi-pum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,9 @@ void	door_door(t_game *game)
 		change_door_state(game, index);
 	if (is_final_door(game) && game->player.key > 0)
 	{
+		play_audio("/home/stdi-pum/Documents/PROJECTS/Cub3D/assets/audio/victory.wav");
 		victory();
 		close_window_b(game);
 	}
 }
+ 

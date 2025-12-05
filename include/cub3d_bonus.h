@@ -49,6 +49,7 @@
 # define DOOR_CLOSED 1
 # define DOOR_PARTIAL 2
 # define DOOR_OPEN 3
+# define DOOR_SOUND 4
 
 # define FLOOR	0
 # define CEILING	1
@@ -63,6 +64,7 @@
 
 # define GUN 0
 # define GUN_SHUT 1
+# define GUN_SHOT_SOUND 3
 
 //Keyboard
 # define KEY_W 0
@@ -670,5 +672,8 @@ void		print_struct_b(t_game *game);
 
 ///			map selection window ///
 void		start(t_start_page *start_page);
+
+///			audio	///
+void		play_audio(const char *file);
 
 #endif

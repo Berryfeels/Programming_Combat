@@ -6,7 +6,7 @@
 /*   By: stdi-pum <stdi-pum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 17:56:39 by mcheragh          #+#    #+#             */
-/*   Updated: 2025/04/03 12:12:41 by stdi-pum         ###   ########.fr       */
+/*   Updated: 2025/09/08 20:17:20 by stdi-pum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	shoot_gun(t_game *game)
 
 	if (game->player.ammo == 0)
 		return ;
+	play_audio("/home/stdi-pum/Documents/PROJECTS/Cub3D/assets/audio/gun.wav");
 	game->player.ammo -= 1;
 	render_gun_shut_b(game);
 	render_gun_shut_b(game);

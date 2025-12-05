@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   health_bar_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcheragh <mcheragh@student.42.fr>          +#+  +:+       +#+        */
+/*   By: stdi-pum <stdi-pum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 17:56:45 by mcheragh          #+#    #+#             */
-/*   Updated: 2025/04/01 17:56:46 by mcheragh         ###   ########.fr       */
+/*   Updated: 2025/09/08 20:35:17 by stdi-pum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ static void	check_player_health(t_game *game)
 		game->player.health -= 2;
 	if (game->player.health < 2)
 	{
+		play_audio("/home/stdi-pum/Documents/PROJECTS/Cub3D/assets/audio/gameover.wav");
 		game_over();
 		close_window_b(game);
 	}

@@ -6,7 +6,7 @@
 /*   By: stdi-pum <stdi-pum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 17:58:24 by mcheragh          #+#    #+#             */
-/*   Updated: 2025/04/03 12:29:14 by stdi-pum         ###   ########.fr       */
+/*   Updated: 2025/09/08 18:38:55 by stdi-pum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,8 @@ static int	init_start_page(t_start_page *start_page)
 		print_error(RED"Error: Failed to load start page image\n"RESET);
 		cleanup_start_page(start_page, 1);
 		return (0);
-	}
+	}	
+	play_audio("/home/stdi-pum/Documents/PROJECTS/Cub3D/assets/audio/soundtrack.wav");
 	return (1);
 }
 
@@ -98,12 +99,13 @@ void	start(t_start_page *start_page)
 	start_page->width = 1000;
 	start_page->height = 600;
 	start_page->selected_map = NULL;
-	start_page->mlx = mlx_init();
+	start_page->mlx = mlx_init();	
 	if (!init_start_page(start_page))
 		cleanup_start_page(start_page, 1);
 	display_starting_page(start_page, start_page->addr);
 	mlx_hook(start_page->win, KeyPress, KeyPressMask, \
 			handle_keypresses, start_page);
 	mlx_loop(start_page->mlx);
+	system("pkill -f soundtrack.wav");
 	cleanup_start_page(start_page, 0);
 }
