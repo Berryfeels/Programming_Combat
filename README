@@ -25,6 +25,7 @@ The game features map exploration, sprite interactions, and an interactive minim
 		* Minimap for better bavigation.
 		* Rotating with mouse.
 		* Sliding doors.
+		* Audio: Soundtrack and audio effects. NOTE!!! Set the right audio files directory of your PC in the code.
 
 	🔹 Combat & Enemies
 		* Weapon system
